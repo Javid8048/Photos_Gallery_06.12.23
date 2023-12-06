@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+
+body {
+    height: 100vh; display: flex; 
+    justify-content: center; align-items: center;
+    background-image: url(img/rulledPaper.webp);
+    background-size: 700px;
+    background-position: center center;
+}
+
+.paper {
+    padding: 20px 20px;
+    border: 1px solid black;
+    position: absolute;
+    background-color: rgb(214, 214, 214);
+    box-shadow: 1px 15px 20px 0px;
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+    transform: rotateZ(-5deg);
+    background-size: 1000px;
+}
+
+.paper:last-child {
+    padding: 20px 100px;
+}
+
+.paper h3, footer {
+    color: red; text-align: center;
+}
