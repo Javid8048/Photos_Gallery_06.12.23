@@ -1,4 +1,4 @@
-document.documentElement.querySelector("head").querySelector("title").innerText = "Dragging Javid Photos";
+document.documentElement.querySelector("head").querySelector("title").innerText = "Javid_NoteBook";
 
 let highestZ = 1;
 
@@ -44,6 +44,7 @@ class Paper {
                     this.prevMouseY = this.mouseY;
     
                     paper.style.transform = `translateX(${this.currentPaperX}px) translateY(${this.currentPaperY}px)`;
+                    console.log(paper.style.transform)
                 }
             });
     
@@ -61,7 +62,7 @@ class Paper {
                 this.prevMouseY = this.mouseY;
             })
     
-            document.addEventListener("touchmove", e => {
+            window.addEventListener("touchmove", e => {
                 this.mouseX = e.changedTouches[0].clientX;
                 this.mouseY = e.changedTouches[0].clientY;
                 this.velocityX = this.mouseX - this.prevMouseX;
@@ -74,7 +75,7 @@ class Paper {
                     this.prevMouseX = this.mouseX;
                     this.prevMouseY = this.mouseY;
     
-                    paper.style.transform = `translateX(${this.currentPaperX - 10}px) translateY(${this.currentPaperY - 10}px)`;
+                    paper.style.transform = `translateX(${this.currentPaperX}px) translateY(${this.currentPaperY}px)`;
                     console.log(paper.style.transform)
                 }
             })
